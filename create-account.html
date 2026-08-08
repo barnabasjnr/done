@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Create an applicant account for the School of Economics online application portal.">
+
+    <title>Create Account | School of Economics</title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f7fb;
+            color: #101828;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+        .header-inner {
+            width: min(1100px, 92%);
+            min-height: 74px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+
+            background: #0b3d91;
+            color: #ffffff;
+
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 800;
+        }
+
+        .brand-text strong {
+            display: block;
+            color: #0b3d91;
+            font-size: 14px;
+        }
+
+        .brand-text span {
+            display: block;
+            color: #667085;
+            font-size: 10px;
+        }
+
+        .home-link {
+            color: #0b3d91;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
+        main {
+            min-height: calc(100vh - 74px);
+
+            display: flex;
+            align-items: center;
+
+            padding: 45px 0;
+        }
+
+        .page-container {
+            width: min(1000px, 92%);
+            margin: auto;
+        }
+
+        .account-layout {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 35px;
+            align-items: stretch;
+        }
+
+
+        /* =====================================================
+           INFORMATION PANEL
+        ===================================================== */
+
+        .information-panel {
+            background:
+                linear-gradient(
+                    145deg,
+                    #061f4d,
+                    #0b3d91
+                );
+
+            color: #ffffff;
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .information-panel .label {
+            color: #a9ceff;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            margin-bottom: 12px;
+        }
+
+        .information-panel h1 {
+            font-size: 30px;
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+        .information-panel p {
+            color: #dbe8fb;
+            font-size: 12px;
+
+            margin-bottom: 25px;
+        }
+
+        .steps {
+            display: grid;
+            gap: 12px;
+        }
+
+        .step {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.12);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            flex-shrink: 0;
+        }
+
+        .step span {
+            color: #dbe8fb;
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           FORM CARD
+        ===================================================== */
+
+        .form-card {
+            background: #ffffff;
+
+            border: 1px solid #eaecf0;
+            border-radius: 15px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 10px 30px rgba(16,24,40,.05);
+        }
+
+        .form-heading {
+            margin-bottom: 25px;
+        }
+
+        .form-heading h2 {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .form-heading p {
+            color: #667085;
+            font-size: 11px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            color: #344054;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            margin-bottom: 6px;
+        }
+
+        .required {
+            color: #d92d20;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 11px 12px;
+
+            border: 1px solid #d0d5dd;
+            border-radius: 7px;
+
+            outline: none;
+
+            font-family: inherit;
+            font-size: 12px;
+
+            transition: .2s;
+        }
+
+        input:focus {
+            border-color: #0b3d91;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(11,61,145,.10);
+        }
+
+        .help {
+            color: #98a2b3;
+            font-size: 9px;
+            margin-top: 5px;
+        }
+
+
+        /* =====================================================
+           PASSWORD
+        ===================================================== */
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input {
+            padding-right: 70px;
+        }
+
+        .show-password {
+            position: absolute;
+
+            right: 10px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            border: none;
+            background: transparent;
+
+            color: #0b3d91;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           TERMS
+        ===================================================== */
+
+        .terms {
+            margin-top: 20px;
+
+            display: flex;
+            gap: 9px;
+
+            align-items: flex-start;
+        }
+
+        .terms input {
+            width: auto;
+            margin-top: 3px;
+        }
+
+        .terms label {
+            color: #667085;
+            font-size: 10px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
+
+        .submit-button {
+            width: 100%;
+
+            border: none;
+            border-radius: 7px;
+
+            background: #0b3d91;
+            color: #ffffff;
+
+            padding: 13px;
+
+            margin-top: 20px;
+
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: .2s;
+        }
+
+        .submit-button:hover {
+            background: #082b68;
+        }
+
+        .login-text {
+            text-align: center;
+
+            color: #667085;
+
+            font-size: 10px;
+
+            margin-top: 18px;
+        }
+
+        .login-text a {
+            color: #0b3d91;
+            font-weight: 800;
+        }
+
+        .message {
+            display: none;
+
+            margin-top: 15px;
+
+            padding: 10px;
+
+            border-radius: 7px;
+
+            font-size: 10px;
+            font-weight: 600;
+
+            text-align: center;
+        }
+
+        .message.error {
+            display: block;
+
+            background: #fef3f2;
+            color: #b42318;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 750px) {
+
+            .account-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .information-panel {
+                padding: 28px;
+            }
+
+            .information-panel h1 {
+                font-size: 25px;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            main {
+                padding: 25px 0;
+            }
+
+            .form-card {
+                padding: 24px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+
+            .home-link {
+                font-size: 10px;
+            }
+
+            .brand-text span {
+                display: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="header-inner">
+
+        <a
+            href="index.html"
+            class="brand">
+
+            <div class="logo">
+                SE
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    School of Economics
+                </strong>
+
+                <span>
+                    Online Application Portal
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="index.html"
+            class="home-link">
+
+            ← Back to School Website
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+    <div class="page-container">
+
+        <div class="account-layout">
+
+
+            <!-- =================================================
+                 INFORMATION
+            ================================================== -->
+
+            <section class="information-panel">
+
+                <div class="label">
+                    Applicant Portal
+                </div>
+
+                <h1>
+                    Create Your Account
+                </h1>
+
+                <p>
+                    Create an applicant account to begin your
+                    application to the School of Economics.
+                </p>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <span>
+                            Create your applicant account
+                        </span>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <span>
+                            Complete your application
+                        </span>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+                        <span>
+                            Upload supporting documents
+                        </span>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <span>
+                            Review and submit your application
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FORM
+            ================================================== -->
+
+            <section class="form-card">
+
+                <div class="form-heading">
+
+                    <h2>
+                        Applicant Registration
+                    </h2>
+
+                    <p>
+                        Enter your details below to create
+                        your application account.
+                    </p>
+
+                </div>
+
+
+                <form id="createAccountForm">
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+
+                                First Name
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="Enter first name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+
+                                Last Name
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Enter last name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label for="email">
+
+                                Email Address
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter email address"
+                                required>
+
+                            <span class="help">
+                                Use an email address you can access.
+                            </span>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+
+                                Phone Number
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="nationality">
+
+                                Nationality
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nationality"
+                                placeholder="Enter nationality"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="password">
+
+                                Password
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Create password"
+                                    minlength="8"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    class="show-password"
+                                    onclick="togglePassword('password', this)">
+
+                                    Show
+
+                                </button>
+
+                            </div>
+
+                            <span class="help">
+                                Minimum 8 characters.
+                            </span>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="confirmPassword">
+
+                                Confirm Password
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    placeholder="Confirm password"
+                                    minlength="8"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    class="show-password"
+                                    onclick="togglePassword('confirmPassword', this)">
+
+                                    Show
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required>
+
+                        <label for="terms">
+
+                            I confirm that the information I provide
+                            is accurate and I agree to the School of
+                            Economics application requirements.
+
+                        </label>
+
+                    </div>
+
+
+                    <div
+                        id="message"
+                        class="message">
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-button">
+
+                        Create Applicant Account
+
+                    </button>
+
+
+                </form>
+
+
+                <div class="login-text">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login here
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /*
+       Show / hide password
+    */
+
+    function togglePassword(
+        fieldId,
+        button
+    ) {
+
+        const field =
+            document.getElementById(fieldId);
+
+
+        if (field.type === "password") {
+
+            field.type = "text";
+
+            button.textContent = "Hide";
+
+        }
+
+        else {
+
+            field.type = "password";
+
+            button.textContent = "Show";
+
+        }
+
+    }
+
+
+
+    /*
+       Create account
+    */
+
+    document
+        .getElementById("createAccountForm")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const firstName =
+                    document.getElementById(
+                        "firstName"
+                    ).value.trim();
+
+
+                const lastName =
+                    document.getElementById(
+                        "lastName"
+                    ).value.trim();
+
+
+                const email =
+                    document.getElementById(
+                        "email"
+                    ).value.trim();
+
+
+                const phone =
+                    document.getElementById(
+                        "phone"
+                    ).value.trim();
+
+
+                const nationality =
+                    document.getElementById(
+                        "nationality"
+                    ).value.trim();
+
+
+                const password =
+                    document.getElementById(
+                        "password"
+                    ).value;
+
+
+                const confirmPassword =
+                    document.getElementById(
+                        "confirmPassword"
+                    ).value;
+
+
+                const message =
+                    document.getElementById(
+                        "message"
+                    );
+
+
+                /*
+                   Check password
+                */
+
+                if (
+                    password !==
+                    confirmPassword
+                ) {
+
+                    message.textContent =
+                        "Passwords do not match.";
+
+                    message.className =
+                        "message error";
+
+                    return;
+
+                }
+
+
+                /*
+                   Applicant information
+
+                   NOTE:
+                   This is a front-end prototype.
+                   Real production authentication must
+                   use the school's server/database.
+                */
+
+                const applicant = {
+
+                    firstName:
+                        firstName,
+
+                    lastName:
+                        lastName,
+
+                    email:
+                        email,
+
+                    phone:
+                        phone,
+
+                    nationality:
+                        nationality
+
+                };
+
+
+                /*
+                   Save applicant information
+                */
+
+                localStorage.setItem(
+
+                    "applicant",
+
+                    JSON.stringify(
+                        applicant
+                    )
+
+                );
+
+
+                /*
+                   Store login state
+                */
+
+                localStorage.setItem(
+                    "loggedIn",
+                    "true"
+                );
+
+
+                /*
+                   Store application progress
+                */
+
+                localStorage.setItem(
+                    "applicationStep",
+                    "application"
+                );
+
+
+                /*
+                   Go to dashboard
+                */
+
+                window.location.href =
+                    "dashboard.html";
+
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>

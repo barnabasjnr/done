@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="School of Economics application document upload">
+
+    <title>Documents | School of Economics</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f7fb;
+            color: #101828;
+            line-height: 1.5;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .application-header {
+            background: white;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+
+        .header-inner {
+            min-height: 76px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+
+            background: #0b3d91;
+            color: white;
+
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 800;
+        }
+
+
+        .brand-text strong {
+            display: block;
+            color: #0b3d91;
+            font-size: 14px;
+        }
+
+
+        .brand-text span {
+            display: block;
+            color: #667085;
+            font-size: 10px;
+        }
+
+
+        .dashboard-link {
+            color: #0b3d91;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .documents-page {
+            padding: 40px 0 70px;
+        }
+
+
+        .page-heading {
+            margin-bottom: 28px;
+        }
+
+
+        .page-heading h1 {
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+
+        .page-heading p {
+            color: #667085;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PROGRESS
+        ========================= */
+
+        .progress {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+
+        .progress-step {
+            background: #eaecf0;
+            border-radius: 20px;
+            padding: 8px;
+            text-align: center;
+            color: #667085;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+
+        .progress-step.completed {
+            background: #12b76a;
+            color: white;
+        }
+
+
+        .progress-step.active {
+            background: #0b3d91;
+            color: white;
+        }
+
+
+        /* =========================
+           MAIN CARD
+        ========================= */
+
+        .documents-container {
+            background: white;
+
+            border: 1px solid #eaecf0;
+
+            border-radius: 12px;
+
+            padding: 30px;
+        }
+
+
+        .notice {
+            background: #edf4ff;
+
+            border: 1px solid #c7dcff;
+
+            border-radius: 9px;
+
+            padding: 15px;
+
+            margin-bottom: 28px;
+
+            color: #344054;
+
+            font-size: 11px;
+        }
+
+
+        .notice strong {
+            color: #0b3d91;
+        }
+
+
+        /* =========================
+           DOCUMENT SECTION
+        ========================= */
+
+        .document-section {
+            margin-bottom: 32px;
+        }
+
+
+        .section-heading {
+            border-bottom: 1px solid #eaecf0;
+
+            padding-bottom: 12px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .section-heading h2 {
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+
+        .section-heading p {
+            color: #667085;
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           DOCUMENT CARDS
+        ========================= */
+
+        .document-list {
+            display: grid;
+            gap: 15px;
+        }
+
+
+        .document-card {
+            border: 1px solid #d0d5dd;
+
+            border-radius: 9px;
+
+            padding: 18px;
+
+            background: #fff;
+
+            transition: .2s;
+        }
+
+
+        .document-card:hover {
+            border-color: #0b3d91;
+        }
+
+
+        .document-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 15px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .document-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #101828;
+        }
+
+
+        .document-description {
+            color: #667085;
+            font-size: 10px;
+            margin-top: 3px;
+        }
+
+
+        .required-badge {
+            background: #fef3f2;
+            color: #b42318;
+
+            border-radius: 20px;
+
+            padding: 4px 8px;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+
+        .optional-badge {
+            background: #f2f4f7;
+            color: #667085;
+
+            border-radius: 20px;
+
+            padding: 4px 8px;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+
+        input[type="file"] {
+            width: 100%;
+
+            border: 1px dashed #98a2b3;
+
+            border-radius: 7px;
+
+            padding: 12px;
+
+            background: #f8fafc;
+
+            font-family: inherit;
+
+            font-size: 11px;
+
+            color: #475467;
+
+            cursor: pointer;
+        }
+
+
+        input[type="file"]:focus {
+            outline: 2px solid rgba(11,61,145,.15);
+
+            border-color: #0b3d91;
+        }
+
+
+        .file-help {
+            color: #98a2b3;
+
+            font-size: 9px;
+
+            margin-top: 6px;
+        }
+
+
+        /* =========================
+           STATUS
+        ========================= */
+
+        .upload-status {
+            display: none;
+
+            margin-top: 8px;
+
+            color: #067647;
+
+            font-size: 10px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           ACTIONS
+        ========================= */
+
+        .form-actions {
+            border-top: 1px solid #eaecf0;
+
+            margin-top: 30px;
+
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+
+        .save-status {
+            display: none;
+
+            color: #067647;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+
+        .btn {
+            border: none;
+
+            border-radius: 7px;
+
+            padding: 11px 18px;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        .btn-secondary {
+            background: #f2f4f7;
+            color: #344054;
+        }
+
+
+        .btn-primary {
+            background: #0b3d91;
+            color: white;
+        }
+
+
+        .btn-primary:hover {
+            background: #082b68;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            .documents-page {
+                padding-top: 25px;
+            }
+
+
+            .documents-container {
+                padding: 20px;
+            }
+
+
+            .progress {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .document-top {
+                flex-direction: column;
+            }
+
+
+            .form-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+
+            .action-buttons {
+                width: 100%;
+            }
+
+
+            .action-buttons .btn {
+                flex: 1;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="application-header">
+
+    <div class="container header-inner">
+
+
+        <a
+            href="index.html"
+            class="brand">
+
+            <div class="brand-logo">
+                SE
+            </div>
+
+
+            <div class="brand-text">
+
+                <strong>
+                    School of Economics
+                </strong>
+
+                <span>
+                    Online Application Portal
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="dashboard.html"
+            class="dashboard-link">
+
+            ← Dashboard
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     PAGE
+========================= -->
+
+<main class="documents-page">
+
+    <div class="container">
+
+
+        <div class="page-heading">
+
+            <h1>
+                Required Documents
+            </h1>
+
+            <p>
+                Upload the documents required to support
+                your application.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             PROGRESS
+        ========================= -->
+
+        <div class="progress">
+
+            <div class="progress-step completed">
+                1. Application
+            </div>
+
+            <div class="progress-step active">
+                2. Documents
+            </div>
+
+            <div class="progress-step">
+                3. Review
+            </div>
+
+            <div class="progress-step">
+                4. Submit
+            </div>
+
+        </div>
+
+
+
+        <form
+            id="documentsForm"
+            class="documents-container">
+
+
+            <div class="notice">
+
+                <strong>Before uploading:</strong>
+
+                Make sure your documents are clear and readable.
+                Accepted formats are PDF, JPG and PNG.
+                Each file should not exceed 5 MB.
+
+            </div>
+
+
+
+            <!-- =========================
+                 DOCUMENTS
+            ========================= -->
+
+            <section class="document-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Academic Documents
+                    </h2>
+
+                    <p>
+                        Upload documents supporting your
+                        academic qualifications.
+                    </p>
+
+                </div>
+
+
+
+                <div class="document-list">
+
+
+                    <!-- WASSCE / CERTIFICATE -->
+
+                    <div class="document-card">
+
+                        <div class="document-top">
+
+                            <div>
+
+                                <div class="document-name">
+                                    Academic Certificate / Result
+                                </div>
+
+                                <div class="document-description">
+                                    Upload your WASSCE, Diploma,
+                                    HND or relevant academic result.
+                                </div>
+
+                            </div>
+
+
+                            <span class="required-badge">
+                                Required
+                            </span>
+
+                        </div>
+
+
+                        <input
+                            type="file"
+                            id="academicCertificate"
+                            name="academicCertificate"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            required>
+
+
+                        <div class="file-help">
+                            PDF, JPG or PNG — Maximum 5 MB
+                        </div>
+
+
+                        <div
+                            class="upload-status"
+                            id="academicCertificateStatus">
+
+                            ✓ Document selected
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ID -->
+
+                    <div class="document-card">
+
+                        <div class="document-top">
+
+                            <div>
+
+                                <div class="document-name">
+                                    Ghana Card / Valid Identification
+                                </div>
+
+                                <div class="document-description">
+                                    Upload a clear copy of your
+                                    valid identification document.
+                                </div>
+
+                            </div>
+
+
+                            <span class="required-badge">
+                                Required
+                            </span>
+
+                        </div>
+
+
+                        <input
+                            type="file"
+                            id="identityDocument"
+                            name="identityDocument"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            required>
+
+
+                        <div class="file-help">
+                            PDF, JPG or PNG — Maximum 5 MB
+                        </div>
+
+
+                        <div
+                            class="upload-status"
+                            id="identityDocumentStatus">
+
+                            ✓ Document selected
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSPORT PHOTO -->
+
+                    <div class="document-card">
+
+                        <div class="document-top">
+
+                            <div>
+
+                                <div class="document-name">
+                                    Passport Photograph
+                                </div>
+
+                                <div class="document-description">
+                                    Upload a recent passport-size
+                                    photograph.
+                                </div>
+
+                            </div>
+
+
+                            <span class="required-badge">
+                                Required
+                            </span>
+
+                        </div>
+
+
+                        <input
+                            type="file"
+                            id="passportPhoto"
+                            name="passportPhoto"
+                            accept=".jpg,.jpeg,.png"
+                            required>
+
+
+                        <div class="file-help">
+                            JPG or PNG — Maximum 5 MB
+                        </div>
+
+
+                        <div
+                            class="upload-status"
+                            id="passportPhotoStatus">
+
+                            ✓ Photograph selected
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- OTHER DOCUMENT -->
+
+                    <div class="document-card">
+
+                        <div class="document-top">
+
+                            <div>
+
+                                <div class="document-name">
+                                    Supporting Document
+                                </div>
+
+                                <div class="document-description">
+                                    Upload any additional document
+                                    relevant to your application.
+                                </div>
+
+                            </div>
+
+
+                            <span class="optional-badge">
+                                Optional
+                            </span>
+
+                        </div>
+
+
+                        <input
+                            type="file"
+                            id="supportingDocument"
+                            name="supportingDocument"
+                            accept=".pdf,.jpg,.jpeg,.png">
+
+
+                        <div class="file-help">
+                            PDF, JPG or PNG — Maximum 5 MB
+                        </div>
+
+
+                        <div
+                            class="upload-status"
+                            id="supportingDocumentStatus">
+
+                            ✓ Document selected
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ACTIONS
+            ========================= -->
+
+            <div class="form-actions">
+
+
+                <span
+                    id="saveStatus"
+                    class="save-status">
+
+                    ✓ Documents saved.
+
+                </span>
+
+
+                <div class="action-buttons">
+
+
+                    <a
+                        href="application.html"
+                        class="btn btn-secondary">
+
+                        ← Back to Application
+
+                    </a>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Save & Continue →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /*
+     * Make sure an application exists
+     */
+
+    const applicationData =
+        localStorage.getItem("applicationData");
+
+
+    if (!applicationData) {
+
+        alert(
+            "Please complete the application form first."
+        );
+
+        window.location.href =
+            "application.html";
+
+    }
+
+
+
+    /*
+     * Check file size
+     */
+
+    const fileInputs =
+        document.querySelectorAll(
+            'input[type="file"]'
+        );
+
+
+    fileInputs.forEach(
+        function(input) {
+
+            input.addEventListener(
+                "change",
+                function() {
+
+                    const status =
+                        document.getElementById(
+                            input.id + "Status"
+                        );
+
+
+                    if (!input.files.length) {
+
+                        if (status) {
+                            status.style.display =
+                                "none";
+                        }
+
+                        return;
+                    }
+
+
+                    const file =
+                        input.files[0];
+
+
+                    const maxSize =
+                        5 * 1024 * 1024;
+
+
+                    if (file.size > maxSize) {
+
+                        alert(
+                            "The selected file is larger than 5 MB."
+                        );
+
+                        input.value = "";
+
+
+                        if (status) {
+                            status.style.display =
+                                "none";
+                        }
+
+                        return;
+
+                    }
+
+
+                    if (status) {
+
+                        status.style.display =
+                            "block";
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /*
+     * Save documents
+     *
+     * Important:
+     * Browser security does not allow us to store
+     * the actual selected file in localStorage.
+     *
+     * We therefore save the file names for this
+     * demonstration version.
+     */
+
+    document
+        .getElementById("documentsForm")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                if (!this.checkValidity()) {
+
+                    this.reportValidity();
+
+                    return;
+
+                }
+
+
+                const documents = {};
+
+
+                fileInputs.forEach(
+                    function(input) {
+
+                        if (input.files.length) {
+
+                            documents[input.name] =
+                                input.files[0].name;
+
+                        }
+
+                    }
+                );
+
+
+                localStorage.setItem(
+                    "applicationDocuments",
+                    JSON.stringify(documents)
+                );
+
+
+                localStorage.setItem(
+                    "applicationStep",
+                    "review"
+                );
+
+
+                const saveStatus =
+                    document.getElementById(
+                        "saveStatus"
+                    );
+
+
+                saveStatus.style.display =
+                    "block";
+
+
+                setTimeout(
+                    function() {
+
+                        window.location.href =
+                            "review.html";
+
+                    },
+                    700
+                );
+
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>

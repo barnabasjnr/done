@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="School of Economics - academic programmes, departments, admissions and online applications.">
+
+    <title>School of Economics | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #101828;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .top-bar {
+            background: #082b68;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        .top-bar-inner {
+            min-height: 38px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .top-bar span {
+            opacity: .9;
+        }
+
+        .main-header {
+            background: #ffffff;
+            border-bottom: 1px solid #eaecf0;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            min-height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+
+            background: #0b3d91;
+            color: #ffffff;
+
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .brand-name strong {
+            display: block;
+            color: #0b3d91;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+        .brand-name span {
+            display: block;
+            color: #667085;
+            font-size: 10px;
+            margin-top: 3px;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .navigation a {
+            color: #344054;
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: color .2s;
+        }
+
+        .navigation a:hover {
+            color: #0b3d91;
+        }
+
+        .nav-apply {
+            background: #0b3d91;
+            color: #ffffff !important;
+
+            padding: 10px 16px;
+            border-radius: 7px;
+        }
+
+        .nav-apply:hover {
+            background: #082b68;
+        }
+
+        .menu-button {
+            display: none;
+
+            border: 0;
+            background: transparent;
+
+            font-size: 25px;
+            color: #0b3d91;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            background:
+                linear-gradient(
+                    120deg,
+                    #061f4d 0%,
+                    #0b3d91 60%,
+                    #1558b0 100%
+                );
+
+            color: #ffffff;
+
+            padding: 85px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-label {
+            display: inline-block;
+
+            padding: 7px 12px;
+            border-radius: 30px;
+
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.2);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.08;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #a9ceff;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            color: #dbe8fb;
+            font-size: 15px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px 20px;
+
+            border-radius: 7px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            transition: .2s;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #0b3d91;
+        }
+
+        .btn-primary:hover {
+            background: #eef4ff;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,.5);
+            color: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,.1);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,.1);
+
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 16px;
+
+            padding: 28px;
+
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .hero-card p {
+            font-size: 12px;
+            margin-bottom: 20px;
+            color: #dbe8fb;
+        }
+
+        .hero-card-link {
+            display: block;
+
+            background: #ffffff;
+            color: #0b3d91;
+
+            padding: 12px;
+
+            border-radius: 7px;
+
+            text-align: center;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           GENERAL SECTION
+        ===================================================== */
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-header {
+            max-width: 680px;
+            margin-bottom: 38px;
+        }
+
+        .section-label {
+            color: #0b3d91;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 {
+            font-size: 30px;
+            line-height: 1.2;
+
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: #667085;
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about {
+            background: #ffffff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: #667085;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .about-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .about-point {
+            background: #f8fafc;
+            border: 1px solid #eaecf0;
+
+            padding: 16px;
+            border-radius: 9px;
+        }
+
+        .about-point strong {
+            display: block;
+            color: #0b3d91;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .about-point span {
+            color: #667085;
+            font-size: 10px;
+        }
+
+        .about-panel {
+            background: #edf4ff;
+            border-radius: 16px;
+
+            padding: 35px;
+        }
+
+        .about-panel h3 {
+            color: #0b3d91;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .about-panel p {
+            color: #475467;
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           DEPARTMENTS
+        ===================================================== */
+
+        .departments {
+            background: #f5f7fb;
+        }
+
+        .department-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .department-card {
+            background: #ffffff;
+
+            border: 1px solid #eaecf0;
+            border-radius: 12px;
+
+            padding: 25px;
+
+            transition:
+                transform .2s,
+                box-shadow .2s;
+        }
+
+        .department-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 30px rgba(16,24,40,.08);
+        }
+
+        .department-icon {
+            width: 44px;
+            height: 44px;
+
+            border-radius: 9px;
+
+            background: #edf4ff;
+            color: #0b3d91;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+        }
+
+        .department-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .department-card p {
+            color: #667085;
+            font-size: 11px;
+
+            margin-bottom: 17px;
+        }
+
+        .learn-more {
+            color: #0b3d91;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           PROGRAMMES
+        ===================================================== */
+
+        .programme-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .programme-card {
+            border: 1px solid #eaecf0;
+            border-radius: 12px;
+
+            padding: 25px;
+
+            background: #ffffff;
+        }
+
+        .programme-type {
+            color: #0b3d91;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: .7px;
+
+            margin-bottom: 10px;
+        }
+
+        .programme-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .programme-card p {
+            color: #667085;
+            font-size: 11px;
+
+            margin-bottom: 18px;
+        }
+
+        .programme-details {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .programme-details span {
+            background: #f2f4f7;
+            color: #475467;
+
+            padding: 5px 8px;
+            border-radius: 5px;
+
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           WHY ECONOMICS
+        ===================================================== */
+
+        .why {
+            background: #061f4d;
+            color: #ffffff;
+        }
+
+        .why .section-label {
+            color: #a9ceff;
+        }
+
+        .why .section-header p {
+            color: #b8c8df;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .why-card {
+            border: 1px solid rgba(255,255,255,.12);
+            background: rgba(255,255,255,.05);
+
+            padding: 22px;
+            border-radius: 10px;
+        }
+
+        .why-card strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+
+        .why-card p {
+            color: #b8c8df;
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           ADMISSIONS
+        ===================================================== */
+
+        .admissions {
+            background: #ffffff;
+        }
+
+        .admissions-box {
+            background: #edf4ff;
+
+            border-radius: 16px;
+
+            padding: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .admissions-box h2 {
+            color: #0b3d91;
+            font-size: 27px;
+
+            margin-bottom: 8px;
+        }
+
+        .admissions-box p {
+            color: #475467;
+            font-size: 12px;
+            max-width: 650px;
+        }
+
+        .admission-actions {
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .admission-primary {
+            background: #0b3d91;
+            color: #ffffff;
+        }
+
+        .admission-secondary {
+            background: #ffffff;
+            color: #0b3d91;
+
+            border: 1px solid #cdd9ed;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact {
+            background: #f5f7fb;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid #eaecf0;
+
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .contact-card strong {
+            display: block;
+            color: #0b3d91;
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+
+        .contact-card span {
+            color: #667085;
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #06152f;
+            color: #ffffff;
+
+            padding: 45px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+
+            padding-bottom: 35px;
+        }
+
+        .footer-brand h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            color: #98a9c3;
+            font-size: 11px;
+            max-width: 400px;
+        }
+
+        .footer-column h4 {
+            font-size: 12px;
+            margin-bottom: 13px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: #98a9c3;
+            font-size: 10px;
+
+            margin-bottom: 8px;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+
+            padding-top: 18px;
+
+            color: #71819a;
+            font-size: 9px;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .navigation {
+                display: none;
+
+                position: absolute;
+                top: 78px;
+                left: 0;
+                right: 0;
+
+                background: #ffffff;
+
+                padding: 20px;
+
+                border-bottom: 1px solid #eaecf0;
+
+                flex-direction: column;
+                align-items: stretch;
+
+                gap: 0;
+            }
+
+            .navigation.show {
+                display: flex;
+            }
+
+            .navigation a {
+                padding: 13px 5px;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .department-grid,
+            .programme-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .admissions-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .top-bar-inner {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .top-bar-inner span:last-child {
+                display: none;
+            }
+
+            .header-inner {
+                min-height: 68px;
+            }
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .department-grid,
+            .programme-grid,
+            .why-grid,
+            .contact-grid,
+            .about-points {
+                grid-template-columns: 1fr;
+            }
+
+            .admissions-box {
+                padding: 28px;
+            }
+
+            .admission-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .admission-actions .btn {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-inner">
+
+        <span>
+            Official School of Economics Information Portal
+        </span>
+
+        <span>
+            Admissions &nbsp; | &nbsp; Student Applications
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">
+                SE
+            </div>
+
+            <div class="brand-name">
+
+                <strong>
+                    School of Economics
+                </strong>
+
+                <span>
+                    Academic &amp; Professional Excellence
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="Open navigation">
+
+            ☰
+
+        </button>
+
+
+        <nav class="navigation" id="navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#departments">
+                Departments
+            </a>
+
+            <a href="#programmes">
+                Programmes
+            </a>
+
+            <a href="#admissions">
+                Admissions
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a
+                href="create-account.html"
+                class="nav-apply">
+
+                Apply Now
+
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                SCHOOL OF ECONOMICS
+            </div>
+
+            <h1>
+                Shaping the Future
+                Through <span>Economics</span>
+            </h1>
+
+            <p>
+                Explore academic opportunities, discover our
+                departments and programmes, and begin your
+                journey toward a career in economics,
+                business, policy and development.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="create-account.html"
+                    class="btn btn-primary">
+
+                    Start Your Application
+
+                </a>
+
+                <a
+                    href="#programmes"
+                    class="btn btn-outline">
+
+                    Explore Programmes
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <h3>
+                Online Applications
+            </h3>
+
+            <p>
+                Applicants can create an account, complete
+                their application, upload supporting documents
+                and submit their application online.
+            </p>
+
+            <a
+                href="create-account.html"
+                class="hero-card-link">
+
+                Create an Applicant Account
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-text">
+
+            <div class="section-label">
+                About the School
+            </div>
+
+            <div class="section-header">
+
+                <h2>
+                    Developing Economists for a Changing World
+                </h2>
+
+            </div>
+
+            <p>
+                The School of Economics provides an environment
+                for learning, research and professional
+                development in economics and related fields.
+            </p>
+
+            <p>
+                Our academic structure will bring together
+                departments and programmes designed to prepare
+                students for opportunities in the public,
+                private, academic and development sectors.
+            </p>
+
+            <div class="about-points">
+
+                <div class="about-point">
+
+                    <strong>
+                        Quality Education
+                    </strong>
+
+                    <span>
+                        Strong academic foundations and
+                        professional development.
+                    </span>
+
+                </div>
+
+                <div class="about-point">
+
+                    <strong>
+                        Research
+                    </strong>
+
+                    <span>
+                        Encouraging analytical thinking and
+                        economic research.
+                    </span>
+
+                </div>
+
+                <div class="about-point">
+
+                    <strong>
+                        Innovation
+                    </strong>
+
+                    <span>
+                        Preparing students for changing
+                        economic environments.
+                    </span>
+
+                </div>
+
+                <div class="about-point">
+
+                    <strong>
+                        Professional Growth
+                    </strong>
+
+                    <span>
+                        Building skills for meaningful careers.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-panel">
+
+            <h3>
+                Our Academic Community
+            </h3>
+
+            <p>
+                The School of Economics brings together
+                students, lecturers, researchers and
+                professionals with a shared interest in
+                understanding economies and improving
+                economic outcomes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DEPARTMENTS
+===================================================== -->
+
+<section class="departments" id="departments">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Academic Structure
+            </div>
+
+            <h2>
+                Departments
+            </h2>
+
+            <p>
+                Explore the departments within the School of
+                Economics. Official department names and
+                descriptions can be inserted when supplied
+                by the School.
+            </p>
+
+        </div>
+
+
+        <div class="department-grid">
+
+
+            <!-- TEMPORARY PLACEHOLDER -->
+
+            <article class="department-card">
+
+                <div class="department-icon">
+                    01
+                </div>
+
+                <h3>
+                    Department One
+                </h3>
+
+                <p>
+                    Department information will be updated
+                    with the official description provided
+                    by the School.
+                </p>
+
+                <a
+                    href="#programmes"
+                    class="learn-more">
+
+                    View Programmes →
+
+                </a>
+
+            </article>
+
+
+            <article class="department-card">
+
+                <div class="department-icon">
+                    02
+                </div>
+
+                <h3>
+                    Department Two
+                </h3>
+
+                <p>
+                    Department information will be updated
+                    with the official description provided
+                    by the School.
+                </p>
+
+                <a
+                    href="#programmes"
+                    class="learn-more">
+
+                    View Programmes →
+
+                </a>
+
+            </article>
+
+
+            <article class="department-card">
+
+                <div class="department-icon">
+                    03
+                </div>
+
+                <h3>
+                    Department Three
+                </h3>
+
+                <p>
+                    Department information will be updated
+                    with the official description provided
+                    by the School.
+                </p>
+
+                <a
+                    href="#programmes"
+                    class="learn-more">
+
+                    View Programmes →
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROGRAMMES
+===================================================== -->
+
+<section id="programmes">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Academic Programmes
+            </div>
+
+            <h2>
+                Programmes
+            </h2>
+
+            <p>
+                The programme list below is temporary and
+                should be replaced with the official programmes
+                supplied by the School of Economics.
+            </p>
+
+        </div>
+
+
+        <div class="programme-grid">
+
+
+            <article class="programme-card">
+
+                <div class="programme-type">
+                    Undergraduate
+                </div>
+
+                <h3>
+                    Programme One
+                </h3>
+
+                <p>
+                    Official programme description will be
+                    added when provided by the School.
+                </p>
+
+                <div class="programme-details">
+
+                    <span>
+                        Undergraduate
+                    </span>
+
+                    <span>
+                        Full Time
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="programme-card">
+
+                <div class="programme-type">
+                    Undergraduate
+                </div>
+
+                <h3>
+                    Programme Two
+                </h3>
+
+                <p>
+                    Official programme description will be
+                    added when provided by the School.
+                </p>
+
+                <div class="programme-details">
+
+                    <span>
+                        Undergraduate
+                    </span>
+
+                    <span>
+                        Full Time
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="programme-card">
+
+                <div class="programme-type">
+                    Postgraduate
+                </div>
+
+                <h3>
+                    Programme Three
+                </h3>
+
+                <p>
+                    Official programme description will be
+                    added when provided by the School.
+                </p>
+
+                <div class="programme-details">
+
+                    <span>
+                        Postgraduate
+                    </span>
+
+                    <span>
+                        Full Time
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY STUDY ECONOMICS
+===================================================== -->
+
+<section class="why">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Why Economics?
+            </div>
+
+            <h2>
+                Skills for the Real World
+            </h2>
+
+            <p>
+                Economics develops analytical and practical
+                skills that can be applied across many
+                professional fields.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <strong>
+                    Analytical Thinking
+                </strong>
+
+                <p>
+                    Understand problems, evaluate evidence
+                    and develop logical solutions.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <strong>
+                    Data &amp; Research
+                </strong>
+
+                <p>
+                    Develop skills for interpreting economic
+                    information and conducting research.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <strong>
+                    Policy
+                </strong>
+
+                <p>
+                    Understand how economic decisions affect
+                    individuals, organisations and society.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <strong>
+                    Career Opportunities
+                </strong>
+
+                <p>
+                    Prepare for opportunities in business,
+                    government, finance and development.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADMISSIONS
+===================================================== -->
+
+<section class="admissions" id="admissions">
+
+    <div class="container">
+
+        <div class="admissions-box">
+
+            <div>
+
+                <h2>
+                    Ready to Begin Your Application?
+                </h2>
+
+                <p>
+                    Create an applicant account to begin your
+                    application to the School of Economics.
+                    You can return to your dashboard later
+                    to continue your application.
+                </p>
+
+            </div>
+
+
+            <div class="admission-actions">
+
+                <a
+                    href="create-account.html"
+                    class="btn admission-primary">
+
+                    Create Account
+
+                </a>
+
+                <a
+                    href="login.html"
+                    class="btn admission-secondary">
+
+                    Applicant Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Contact
+            </div>
+
+            <h2>
+                School of Economics
+            </h2>
+
+            <p>
+                Official contact information can be inserted
+                when supplied by the School.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <strong>
+                    Address
+                </strong>
+
+                <span>
+                    Official school address
+                </span>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <strong>
+                    Email
+                </strong>
+
+                <span>
+                    Official school email
+                </span>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <strong>
+                    Telephone
+                </strong>
+
+                <span>
+                    Official school telephone
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <h3>
+                    School of Economics
+                </h3>
+
+                <p>
+                    Academic excellence, economic research
+                    and professional development.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#departments">
+                    Departments
+                </a>
+
+                <a href="#programmes">
+                    Programmes
+                </a>
+
+                <a href="#admissions">
+                    Admissions
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Application
+                </h4>
+
+                <a href="create-account.html">
+                    Create Account
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="dashboard.html">
+                    Applicant Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 School of Economics. All rights reserved.
+            </span>
+
+            <span>
+                Official school information portal
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const navigation =
+        document.getElementById("navigation");
+
+
+    menuButton.addEventListener(
+        "click",
+        function () {
+
+            navigation.classList.toggle("show");
+
+        }
+    );
+
+
+    /*
+       Close mobile menu after clicking a link.
+    */
+
+    document
+        .querySelectorAll(".navigation a")
+        .forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    navigation.classList.remove("show");
+
+                }
+            );
+
+        });
+
+</script>
+
+</body>
+</html>

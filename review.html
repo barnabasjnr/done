@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Review School of Economics application">
+
+    <title>Review Application | School of Economics</title>
+
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f7fb;
+            color: #101828;
+            line-height: 1.5;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .application-header {
+            background: white;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+
+        .header-inner {
+            min-height: 76px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+
+            background: #0b3d91;
+            color: white;
+
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 800;
+        }
+
+
+        .brand-text strong {
+            display: block;
+            color: #0b3d91;
+            font-size: 14px;
+        }
+
+
+        .brand-text span {
+            display: block;
+            color: #667085;
+            font-size: 10px;
+        }
+
+
+        .dashboard-link {
+            color: #0b3d91;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .review-page {
+            padding: 40px 0 70px;
+        }
+
+
+        .page-heading {
+            margin-bottom: 28px;
+        }
+
+
+        .page-heading h1 {
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+
+        .page-heading p {
+            color: #667085;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PROGRESS
+        ========================= */
+
+        .progress {
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 8px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .progress-step {
+            background: #eaecf0;
+
+            border-radius: 20px;
+
+            padding: 8px;
+
+            text-align: center;
+
+            color: #667085;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+
+        .progress-step.completed {
+            background: #12b76a;
+            color: white;
+        }
+
+
+        .progress-step.active {
+            background: #0b3d91;
+            color: white;
+        }
+
+
+        /* =========================
+           REVIEW CARD
+        ========================= */
+
+        .review-container {
+            background: white;
+
+            border: 1px solid #eaecf0;
+
+            border-radius: 12px;
+
+            padding: 30px;
+        }
+
+
+        .review-section {
+            margin-bottom: 32px;
+        }
+
+
+        .review-section:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .section-heading {
+            border-bottom: 1px solid #eaecf0;
+
+            padding-bottom: 12px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .section-heading h2 {
+            font-size: 18px;
+        }
+
+
+        .section-heading p {
+            color: #667085;
+            font-size: 11px;
+            margin-top: 3px;
+        }
+
+
+        /* =========================
+           INFORMATION GRID
+        ========================= */
+
+        .information-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .information-item {
+            background: #f8fafc;
+
+            border: 1px solid #eaecf0;
+
+            border-radius: 8px;
+
+            padding: 13px;
+        }
+
+
+        .information-item.full {
+            grid-column: 1 / -1;
+        }
+
+
+        .information-label {
+            color: #667085;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            margin-bottom: 4px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .3px;
+        }
+
+
+        .information-value {
+            color: #101828;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            word-break: break-word;
+        }
+
+
+        .empty-value {
+            color: #98a2b3;
+            font-weight: 400;
+        }
+
+
+        /* =========================
+           NOTICE
+        ========================= */
+
+        .review-notice {
+            background: #edf4ff;
+
+            border: 1px solid #c7dcff;
+
+            border-radius: 9px;
+
+            padding: 15px;
+
+            margin-bottom: 25px;
+
+            color: #344054;
+
+            font-size: 11px;
+        }
+
+
+        .review-notice strong {
+            color: #0b3d91;
+        }
+
+
+        /* =========================
+           DECLARATION
+        ========================= */
+
+        .declaration {
+            background: #f0fdf4;
+
+            border: 1px solid #abefc6;
+
+            border-radius: 9px;
+
+            padding: 17px;
+
+            color: #344054;
+
+            font-size: 11px;
+        }
+
+
+        .declaration strong {
+            display: block;
+
+            color: #067647;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           ACTIONS
+        ========================= */
+
+        .review-actions {
+            border-top: 1px solid #eaecf0;
+
+            margin-top: 30px;
+
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+
+        .btn {
+            border: none;
+
+            border-radius: 7px;
+
+            padding: 11px 18px;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        .btn-secondary {
+            background: #f2f4f7;
+            color: #344054;
+        }
+
+
+        .btn-primary {
+            background: #0b3d91;
+            color: white;
+        }
+
+
+        .btn-primary:hover {
+            background: #082b68;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .review-page {
+                padding-top: 25px;
+            }
+
+
+            .review-container {
+                padding: 20px;
+            }
+
+
+            .information-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .information-item.full {
+                grid-column: auto;
+            }
+
+
+            .progress {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .review-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+
+            .action-buttons {
+                width: 100%;
+            }
+
+
+            .action-buttons .btn {
+                flex: 1;
+                text-align: center;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="application-header">
+
+    <div class="container header-inner">
+
+
+        <a
+            href="index.html"
+            class="brand">
+
+            <div class="brand-logo">
+                SE
+            </div>
+
+
+            <div class="brand-text">
+
+                <strong>
+                    School of Economics
+                </strong>
+
+                <span>
+                    Online Application Portal
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="dashboard.html"
+            class="dashboard-link">
+
+            ← Dashboard
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="review-page">
+
+    <div class="container">
+
+
+        <div class="page-heading">
+
+            <h1>
+                Review Application
+            </h1>
+
+            <p>
+                Please carefully review your information
+                before proceeding to the submission stage.
+            </p>
+
+        </div>
+
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress">
+
+            <div class="progress-step completed">
+                1. Application
+            </div>
+
+            <div class="progress-step completed">
+                2. Documents
+            </div>
+
+            <div class="progress-step active">
+                3. Review
+            </div>
+
+            <div class="progress-step">
+                4. Submit
+            </div>
+
+        </div>
+
+
+
+        <div class="review-container">
+
+
+            <div class="review-notice">
+
+                <strong>Important:</strong>
+
+                Check that all information below is correct.
+                If you need to make changes, select
+                <strong>Back to Application</strong> before
+                continuing.
+
+            </div>
+
+
+
+            <!-- =========================
+                 PROGRAMME
+            ========================= -->
+
+            <section class="review-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Programme Information
+                    </h2>
+
+                    <p>
+                        Your selected programme and admission details.
+                    </p>
+
+                </div>
+
+
+                <div class="information-grid">
+
+                    <div class="information-item">
+
+                        <div class="information-label">
+                            Programme
+                        </div>
+
+                        <div
+                            class="information-value"
+                            id="programme">
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <div class="information-label">
+                            Entry Type
+                        </div>
+
+                        <div
+                            class="information-value"
+                            id="entryType">
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <div class="information-label">
+                            Academic Year
+                        </div>
+
+                        <div
+                            class="information-value"
+                            id="academicYear">
+                            —
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 PERSONAL
+            ========================= -->
+
+            <section class="review-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Personal Information
+                    </h2>
+
+                </div>
+
+
+                <div class="information-grid">
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            First Name
+                        </div>
+                        <div class="information-value"
+                             id="firstName">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Middle Name
+                        </div>
+                        <div class="information-value"
+                             id="middleName">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Last Name
+                        </div>
+                        <div class="information-value"
+                             id="lastName">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Date of Birth
+                        </div>
+                        <div class="information-value"
+                             id="dateOfBirth">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Gender
+                        </div>
+                        <div class="information-value"
+                             id="gender">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Nationality
+                        </div>
+                        <div class="information-value"
+                             id="nationality">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Ghana Card / ID Number
+                        </div>
+                        <div class="information-value"
+                             id="idNumber">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Marital Status
+                        </div>
+                        <div class="information-value"
+                             id="maritalStatus">—</div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 CONTACT
+            ========================= -->
+
+            <section class="review-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Contact Information
+                    </h2>
+
+                </div>
+
+
+                <div class="information-grid">
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Email Address
+                        </div>
+                        <div class="information-value"
+                             id="email">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Phone Number
+                        </div>
+                        <div class="information-value"
+                             id="phone">—</div>
+                    </div>
+
+
+                    <div class="information-item full">
+                        <div class="information-label">
+                            Residential Address
+                        </div>
+                        <div class="information-value"
+                             id="address">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Region
+                        </div>
+                        <div class="information-value"
+                             id="region">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            City / Town
+                        </div>
+                        <div class="information-value"
+                             id="city">—</div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ACADEMIC
+            ========================= -->
+
+            <section class="review-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Academic Background
+                    </h2>
+
+                </div>
+
+
+                <div class="information-grid">
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Previous Institution
+                        </div>
+                        <div class="information-value"
+                             id="institution">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Highest Qualification
+                        </div>
+                        <div class="information-value"
+                             id="qualification">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Examination / Index Number
+                        </div>
+                        <div class="information-value"
+                             id="examNumber">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Year Completed
+                        </div>
+                        <div class="information-value"
+                             id="completionYear">—</div>
+                    </div>
+
+
+                    <div class="information-item full">
+                        <div class="information-label">
+                            Academic Details
+                        </div>
+                        <div class="information-value"
+                             id="academicDetails">—</div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 NEXT OF KIN
+            ========================= -->
+
+            <section class="review-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Next of Kin / Emergency Contact
+                    </h2>
+
+                </div>
+
+
+                <div class="information-grid">
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Full Name
+                        </div>
+                        <div class="information-value"
+                             id="kinName">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Relationship
+                        </div>
+                        <div class="information-value"
+                             id="kinRelationship">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Phone Number
+                        </div>
+                        <div class="information-value"
+                             id="kinPhone">—</div>
+                    </div>
+
+
+                    <div class="information-item">
+                        <div class="information-label">
+                            Email Address
+                        </div>
+                        <div class="information-value"
+                             id="kinEmail">—</div>
+                    </div>
+
+
+                    <div class="information-item full">
+                        <div class="information-label">
+                            Address
+                        </div>
+                        <div class="information-value"
+                             id="kinAddress">—</div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 DECLARATION
+            ========================= -->
+
+            <section class="review-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Declaration
+                    </h2>
+
+                </div>
+
+
+                <div class="declaration">
+
+                    <strong>
+                        Declaration Confirmed
+                    </strong>
+
+                    I declare that the information provided
+                    in this application is true and accurate
+                    to the best of my knowledge.
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ACTIONS
+            ========================= -->
+
+            <div class="review-actions">
+
+                <span>
+                    <strong>Final check:</strong>
+                    Make sure everything is correct.
+                </span>
+
+
+                <div class="action-buttons">
+
+                    <a
+                        href="application.html"
+                        class="btn btn-secondary">
+
+                        ← Back to Application
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        id="continueButton"
+                        class="btn btn-primary">
+
+                        Continue to Submit →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    const savedApplication =
+        localStorage.getItem("applicationData");
+
+
+    if (!savedApplication) {
+
+        alert(
+            "No saved application was found."
+        );
+
+        window.location.href =
+            "application.html";
+
+    }
+
+
+    let data = {};
+
+
+    try {
+
+        data =
+            JSON.parse(savedApplication);
+
+    }
+
+    catch (error) {
+
+        alert(
+            "Unable to read your saved application."
+        );
+
+        window.location.href =
+            "application.html";
+
+    }
+
+
+
+    function displayValue(
+        fieldId,
+        value
+    ) {
+
+        const element =
+            document.getElementById(fieldId);
+
+
+        if (!element) {
+            return;
+        }
+
+
+        if (
+            value === undefined ||
+            value === null ||
+            value === ""
+        ) {
+
+            element.textContent =
+                "Not provided";
+
+            element.classList.add(
+                "empty-value"
+            );
+
+            return;
+        }
+
+
+        element.textContent =
+            value;
+
+    }
+
+
+
+    const fields = [
+
+        "programme",
+        "entryType",
+        "academicYear",
+
+        "firstName",
+        "middleName",
+        "lastName",
+        "dateOfBirth",
+        "gender",
+        "nationality",
+        "idNumber",
+        "maritalStatus",
+
+        "email",
+        "phone",
+        "address",
+        "region",
+        "city",
+
+        "institution",
+        "qualification",
+        "examNumber",
+        "completionYear",
+        "academicDetails",
+
+        "kinName",
+        "kinRelationship",
+        "kinPhone",
+        "kinEmail",
+        "kinAddress"
+
+    ];
+
+
+    fields.forEach(
+        function(field) {
+
+            displayValue(
+                field,
+                data[field]
+            );
+
+        }
+    );
+
+
+
+    /*
+       Move application to review stage
+    */
+
+    localStorage.setItem(
+        "applicationStep",
+        "review"
+    );
+
+
+
+    /*
+       Continue to submission
+    */
+
+    document
+        .getElementById("continueButton")
+        .addEventListener(
+            "click",
+            function() {
+
+                localStorage.setItem(
+                    "applicationStep",
+                    "submit"
+                );
+
+
+                window.location.href =
+                    "submit.html";
+
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>

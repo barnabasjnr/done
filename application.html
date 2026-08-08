@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="School of Economics Online Application Form">
+
+    <title>Application Form | School of Economics</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Existing stylesheet -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f7fb;
+            color: #101828;
+            line-height: 1.5;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .application-header {
+            background: white;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+
+        .header-inner {
+            min-height: 76px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+
+            background: #0b3d91;
+            color: white;
+
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+
+        .brand-text strong {
+            display: block;
+            color: #0b3d91;
+            font-size: 14px;
+        }
+
+
+        .brand-text span {
+            display: block;
+            color: #667085;
+            font-size: 10px;
+        }
+
+
+        .dashboard-link {
+            color: #0b3d91;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
+        .application-page {
+            padding: 40px 0 70px;
+        }
+
+
+        .page-heading {
+            margin-bottom: 28px;
+        }
+
+
+        .page-heading h1 {
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+
+        .page-heading p {
+            color: #667085;
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           LAYOUT
+        ===================================================== */
+
+        .application-layout {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+
+        /* =====================================================
+           SIDEBAR
+        ===================================================== */
+
+        .application-sidebar {
+            background: white;
+
+            border: 1px solid #eaecf0;
+            border-radius: 12px;
+
+            padding: 20px;
+
+            position: sticky;
+            top: 20px;
+        }
+
+
+        .sidebar-heading {
+            font-size: 11px;
+            font-weight: 800;
+            color: #667085;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            margin-bottom: 17px;
+        }
+
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 10px 8px;
+            margin-bottom: 5px;
+
+            border-radius: 7px;
+
+            color: #667085;
+            font-size: 12px;
+        }
+
+
+        .step.active {
+            background: #edf4ff;
+            color: #0b3d91;
+            font-weight: 700;
+        }
+
+
+        .step-number {
+            width: 25px;
+            height: 25px;
+
+            border-radius: 50%;
+
+            background: #f2f4f7;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            flex-shrink: 0;
+        }
+
+
+        .step.active .step-number {
+            background: #0b3d91;
+            color: white;
+        }
+
+
+        .step.completed .step-number {
+            background: #12b76a;
+            color: white;
+        }
+
+
+        /* =====================================================
+           FORM CONTAINER
+        ===================================================== */
+
+        .form-container {
+            background: white;
+
+            border: 1px solid #eaecf0;
+            border-radius: 12px;
+
+            padding: 35px;
+        }
+
+
+        .form-section {
+            margin-bottom: 38px;
+        }
+
+
+        .form-section:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .section-heading {
+            border-bottom: 1px solid #eaecf0;
+
+            padding-bottom: 14px;
+            margin-bottom: 22px;
+        }
+
+
+        .section-heading h2 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+
+        .section-heading p {
+            color: #667085;
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           FORM GRID
+        ===================================================== */
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+
+        label {
+            color: #344054;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+
+        .required {
+            color: #d92d20;
+        }
+
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            border: 1px solid #d0d5dd;
+            border-radius: 7px;
+
+            padding: 11px 12px;
+
+            font-family: inherit;
+            font-size: 12px;
+
+            color: #101828;
+            background: white;
+
+            outline: none;
+
+            transition: border .2s,
+                        box-shadow .2s;
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            border-color: #0b3d91;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(11,61,145,.10);
+        }
+
+
+        textarea {
+            min-height: 95px;
+            resize: vertical;
+        }
+
+
+        .field-help {
+            color: #98a2b3;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+
+
+        .error-message {
+            color: #b42318;
+            font-size: 10px;
+            margin-top: 5px;
+            display: none;
+        }
+
+
+        /* =====================================================
+           PROGRAMME BOX
+        ===================================================== */
+
+        .programme-notice {
+
+            background: #f8fafc;
+
+            border: 1px solid #eaecf0;
+
+            border-radius: 8px;
+
+            padding: 15px;
+
+            margin-bottom: 20px;
+
+            color: #475467;
+
+            font-size: 11px;
+        }
+
+
+        .programme-notice strong {
+            color: #0b3d91;
+        }
+
+
+        /* =====================================================
+           DECLARATION
+        ===================================================== */
+
+        .declaration {
+
+            background: #f8fafc;
+
+            border: 1px solid #eaecf0;
+
+            border-radius: 9px;
+
+            padding: 18px;
+
+            display: flex;
+
+            gap: 12px;
+
+            align-items: flex-start;
+        }
+
+
+        .declaration input {
+            width: auto;
+            margin-top: 3px;
+        }
+
+
+        .declaration label {
+
+            font-weight: 500;
+            font-size: 11px;
+            color: #475467;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           ACTIONS
+        ===================================================== */
+
+        .form-actions {
+
+            border-top: 1px solid #eaecf0;
+
+            margin-top: 30px;
+            padding-top: 22px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 15px;
+        }
+
+
+        .save-status {
+
+            display: none;
+
+            color: #067647;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+
+        .action-buttons {
+
+            display: flex;
+            gap: 10px;
+        }
+
+
+        .btn {
+
+            border: none;
+
+            border-radius: 7px;
+
+            padding: 11px 18px;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        .btn-secondary {
+
+            background: #f2f4f7;
+            color: #344054;
+        }
+
+
+        .btn-primary {
+
+            background: #0b3d91;
+            color: white;
+        }
+
+
+        .btn-primary:hover {
+
+            background: #082b68;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .application-layout {
+                grid-template-columns: 1fr;
+            }
+
+
+            .application-sidebar {
+                position: static;
+            }
+
+
+            .sidebar-steps {
+
+                display: grid;
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                gap: 5px;
+            }
+
+
+            .step {
+
+                justify-content: center;
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .application-page {
+                padding-top: 25px;
+            }
+
+
+            .form-container {
+                padding: 22px;
+            }
+
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+
+            .sidebar-steps {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .form-actions {
+
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+
+            .action-buttons {
+
+                width: 100%;
+            }
+
+
+            .action-buttons .btn {
+
+                flex: 1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="application-header">
+
+    <div class="container header-inner">
+
+
+        <a
+            href="index.html"
+            class="brand">
+
+
+            <div class="brand-logo">
+                SE
+            </div>
+
+
+            <div class="brand-text">
+
+                <strong>
+                    School of Economics
+                </strong>
+
+                <span>
+                    Online Application Portal
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="dashboard.html"
+            class="dashboard-link">
+
+            ← Dashboard
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE
+===================================================== -->
+
+<main class="application-page">
+
+    <div class="container">
+
+
+        <div class="page-heading">
+
+            <h1>
+                Application Form
+            </h1>
+
+            <p>
+                Complete the information below to continue
+                with your application to the School of Economics.
+            </p>
+
+        </div>
+
+
+
+        <div class="application-layout">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+            <aside class="application-sidebar">
+
+                <div class="sidebar-heading">
+                    Application Progress
+                </div>
+
+
+                <div class="sidebar-steps">
+
+
+                    <div class="step active">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <span>
+                            Application
+                        </span>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <span>
+                            Documents
+                        </span>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+                        <span>
+                            Review
+                        </span>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <span>
+                            Submit
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- =================================================
+                 FORM
+            ================================================== -->
+
+            <form
+                id="applicationForm"
+                class="form-container">
+
+
+                <!-- =================================================
+                     SECTION 1
+                ================================================== -->
+
+                <section class="form-section">
+
+
+                    <div class="section-heading">
+
+                        <h2>
+                            1. Programme Information
+                        </h2>
+
+                        <p>
+                            Select the programme and admission
+                            information for your application.
+                        </p>
+
+                    </div>
+
+
+                    <div class="programme-notice">
+
+                        <strong>Important:</strong>
+
+                        The official list of programmes will
+                        be added once it is provided by the
+                        School of Economics.
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="programme">
+
+                                Programme
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <select
+                                id="programme"
+                                name="programme"
+                                required>
+
+                                <option value="">
+                                    Select programme
+                                </option>
+
+                                <option value="programme-1">
+                                    Programme 1
+                                </option>
+
+                                <option value="programme-2">
+                                    Programme 2
+                                </option>
+
+                                <option value="programme-3">
+                                    Programme 3
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="entryType">
+
+                                Entry Type
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <select
+                                id="entryType"
+                                name="entryType"
+                                required>
+
+                                <option value="">
+                                    Select entry type
+                                </option>
+
+                                <option value="regular">
+                                    Regular Entry
+                                </option>
+
+                                <option value="mature">
+                                    Mature Entry
+                                </option>
+
+                                <option value="top-up">
+                                    Top-Up / Diploma
+                                </option>
+
+                                <option value="postgraduate">
+                                    Postgraduate
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="academicYear">
+                                Academic Year
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="academicYear"
+                                value="2026/2027"
+                                readonly>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SECTION 2
+                ================================================== -->
+
+                <section class="form-section">
+
+
+                    <div class="section-heading">
+
+                        <h2>
+                            2. Personal Information
+                        </h2>
+
+                        <p>
+                            Enter your personal details exactly
+                            as they appear on your official documents.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+
+                                First Name
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                placeholder="Enter first name"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="middleName">
+
+                                Middle Name
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="middleName"
+                                name="middleName"
+                                placeholder="Enter middle name">
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+
+                                Last Name
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                placeholder="Enter last name"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="dateOfBirth">
+
+                                Date of Birth
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="date"
+                                id="dateOfBirth"
+                                name="dateOfBirth"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="gender">
+
+                                Gender
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <select
+                                id="gender"
+                                name="gender"
+                                required>
+
+                                <option value="">
+                                    Select gender
+                                </option>
+
+                                <option value="male">
+                                    Male
+                                </option>
+
+                                <option value="female">
+                                    Female
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="nationality">
+
+                                Nationality
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="nationality"
+                                name="nationality"
+                                placeholder="e.g. Ghanaian"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="idNumber">
+
+                                Ghana Card / ID Number
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="idNumber"
+                                name="idNumber"
+                                placeholder="Enter ID number"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="maritalStatus">
+                                Marital Status
+                            </label>
+
+
+                            <select
+                                id="maritalStatus"
+                                name="maritalStatus">
+
+                                <option value="">
+                                    Select status
+                                </option>
+
+                                <option value="single">
+                                    Single
+                                </option>
+
+                                <option value="married">
+                                    Married
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SECTION 3
+                ================================================== -->
+
+                <section class="form-section">
+
+
+                    <div class="section-heading">
+
+                        <h2>
+                            3. Contact Information
+                        </h2>
+
+                        <p>
+                            Provide active contact information
+                            that can be used to reach you.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+
+                                Email Address
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="example@email.com"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+
+                                Phone Number
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="e.g. 024 XXX XXXX"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group full">
+
+                            <label for="address">
+
+                                Residential Address
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <textarea
+                                id="address"
+                                name="address"
+                                placeholder="Enter your residential address"
+                                required></textarea>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="region">
+
+                                Region
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <select
+                                id="region"
+                                name="region"
+                                required>
+
+                                <option value="">
+                                    Select region
+                                </option>
+
+                                <option>
+                                    Greater Accra
+                                </option>
+
+                                <option>
+                                    Ashanti
+                                </option>
+
+                                <option>
+                                    Central
+                                </option>
+
+                                <option>
+                                    Eastern
+                                </option>
+
+                                <option>
+                                    Western
+                                </option>
+
+                                <option>
+                                    Western North
+                                </option>
+
+                                <option>
+                                    Volta
+                                </option>
+
+                                <option>
+                                    Oti
+                                </option>
+
+                                <option>
+                                    Northern
+                                </option>
+
+                                <option>
+                                    Savannah
+                                </option>
+
+                                <option>
+                                    North East
+                                </option>
+
+                                <option>
+                                    Upper East
+                                </option>
+
+                                <option>
+                                    Upper West
+                                </option>
+
+                                <option>
+                                    Bono
+                                </option>
+
+                                <option>
+                                    Bono East
+                                </option>
+
+                                <option>
+                                    Ahafo
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="city">
+
+                                City / Town
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                placeholder="Enter city or town"
+                                required>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SECTION 4
+                ================================================== -->
+
+                <section class="form-section">
+
+
+                    <div class="section-heading">
+
+                        <h2>
+                            4. Academic Background
+                        </h2>
+
+                        <p>
+                            Provide information about your
+                            previous academic qualification.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="institution">
+
+                                Previous Institution
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="institution"
+                                name="institution"
+                                placeholder="School / University"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="qualification">
+
+                                Highest Qualification
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <select
+                                id="qualification"
+                                name="qualification"
+                                required>
+
+                                <option value="">
+                                    Select qualification
+                                </option>
+
+                                <option>
+                                    WASSCE
+                                </option>
+
+                                <option>
+                                    Diploma
+                                </option>
+
+                                <option>
+                                    HND
+                                </option>
+
+                                <option>
+                                    Bachelor's Degree
+                                </option>
+
+                                <option>
+                                    Master's Degree
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="examNumber">
+
+                                Examination / Index Number
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="examNumber"
+                                name="examNumber"
+                                placeholder="Enter examination number">
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="completionYear">
+
+                                Year Completed
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="number"
+                                id="completionYear"
+                                name="completionYear"
+                                min="1950"
+                                max="2030"
+                                placeholder="e.g. 2025"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group full">
+
+                            <label for="academicDetails">
+
+                                Academic Details
+
+                            </label>
+
+
+                            <textarea
+                                id="academicDetails"
+                                name="academicDetails"
+                                placeholder="Provide any additional relevant academic information"></textarea>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SECTION 5
+                ================================================== -->
+
+                <section class="form-section">
+
+
+                    <div class="section-heading">
+
+                        <h2>
+                            5. Next of Kin / Emergency Contact
+                        </h2>
+
+                        <p>
+                            Provide a person who can be contacted
+                            in case of an emergency.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="kinName">
+
+                                Full Name
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="kinName"
+                                name="kinName"
+                                placeholder="Enter full name"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="kinRelationship">
+
+                                Relationship
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <select
+                                id="kinRelationship"
+                                name="kinRelationship"
+                                required>
+
+                                <option value="">
+                                    Select relationship
+                                </option>
+
+                                <option>
+                                    Father
+                                </option>
+
+                                <option>
+                                    Mother
+                                </option>
+
+                                <option>
+                                    Guardian
+                                </option>
+
+                                <option>
+                                    Spouse
+                                </option>
+
+                                <option>
+                                    Sibling
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="kinPhone">
+
+                                Phone Number
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input
+                                type="tel"
+                                id="kinPhone"
+                                name="kinPhone"
+                                placeholder="Enter phone number"
+                                required>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="kinEmail">
+
+                                Email Address
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="kinEmail"
+                                name="kinEmail"
+                                placeholder="example@email.com">
+
+                        </div>
+
+
+
+                        <div class="form-group full">
+
+                            <label for="kinAddress">
+
+                                Address
+
+                                <span class="required">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <textarea
+                                id="kinAddress"
+                                name="kinAddress"
+                                placeholder="Enter address"
+                                required></textarea>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SECTION 6
+                ================================================== -->
+
+                <section class="form-section">
+
+
+                    <div class="section-heading">
+
+                        <h2>
+                            6. Declaration
+                        </h2>
+
+                        <p>
+                            Please read the declaration carefully
+                            before continuing.
+                        </p>
+
+                    </div>
+
+
+                    <div class="declaration">
+
+
+                        <input
+                            type="checkbox"
+                            id="declaration"
+                            name="declaration"
+                            required>
+
+
+                        <label for="declaration">
+
+                            I declare that the information provided
+                            in this application is true and accurate
+                            to the best of my knowledge. I understand
+                            that providing false or misleading
+                            information may result in the rejection
+                            or cancellation of my application.
+
+                        </label>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     ACTIONS
+                ================================================== -->
+
+                <div class="form-actions">
+
+
+                    <span
+                        id="saveStatus"
+                        class="save-status">
+
+                        ✓ Application information saved.
+
+                    </span>
+
+
+                    <div class="action-buttons">
+
+
+                        <a
+                            href="dashboard.html"
+                            class="btn btn-secondary">
+
+                            Save & Exit
+
+                        </a>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+
+                            Save & Continue →
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+// =====================================================
+// LOGIN CHECK
+// =====================================================
+
+const loggedIn =
+    localStorage.getItem("loggedIn");
+
+const applicant =
+    localStorage.getItem("applicant");
+
+
+if (
+    loggedIn !== "true" ||
+    !applicant
+) {
+
+    window.location.href =
+        "login.html";
+
+}
+
+
+
+// =====================================================
+// LOAD SAVED APPLICATION
+// =====================================================
+
+const savedApplication =
+    localStorage.getItem(
+        "applicationData"
+    );
+
+
+if (savedApplication) {
+
+    try {
+
+        const data =
+            JSON.parse(
+                savedApplication
+            );
+
+
+        Object.keys(data).forEach(
+            function(key) {
+
+                const field =
+                    document.getElementById(
+                        key
+                    );
+
+
+                if (!field) {
+                    return;
+                }
+
+
+                if (
+                    field.type ===
+                    "checkbox"
+                ) {
+
+                    field.checked =
+                        data[key];
+
+                }
+
+                else {
+
+                    field.value =
+                        data[key];
+
+                }
+
+            }
+        );
+
+    }
+
+    catch (error) {
+
+        console.log(
+            "Unable to load saved application."
+        );
+
+    }
+
+}
+
+
+
+// =====================================================
+// FORM SUBMISSION
+// =====================================================
+
+document.getElementById(
+    "applicationForm"
+).addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        // Browser validation
+
+        if (
+            !this.checkValidity()
+        ) {
+
+            this.reportValidity();
+
+            return;
+
+        }
+
+
+
+        // Collect form data
+
+        const formData =
+            new FormData(this);
+
+
+        const applicationData =
+            {};
+
+
+        formData.forEach(
+            function(value, key) {
+
+                applicationData[key] =
+                    value;
+
+            }
+        );
+
+
+
+        // Academic year
+
+        applicationData.academicYear =
+            document.getElementById(
+                "academicYear"
+            ).value;
+
+
+
+        // Save
+
+        localStorage.setItem(
+
+            "applicationData",
+
+            JSON.stringify(
+                applicationData
+            )
+
+        );
+
+
+
+        // Application progress
+
+        localStorage.setItem(
+            "applicationStep",
+            "documents"
+        );
+
+
+
+        // Show confirmation
+
+        const saveStatus =
+            document.getElementById(
+                "saveStatus"
+            );
+
+
+        saveStatus.style.display =
+            "block";
+
+
+
+        // Continue to documents
+
+        setTimeout(
+            function() {
+
+                window.location.href =
+                    "documents.html";
+
+            },
+            800
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

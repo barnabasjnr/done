@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Final submission of School of Economics application">
+
+    <title>Submit Application | School of Economics</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f5f7fb;
+            color: #101828;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1000px, 92%);
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        .application-header {
+            background: white;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+        .header-inner {
+            min-height: 76px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 44px;
+            height: 44px;
+
+            background: #0b3d91;
+            color: white;
+
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .brand-text strong {
+            display: block;
+            color: #0b3d91;
+            font-size: 14px;
+        }
+
+        .brand-text span {
+            display: block;
+            color: #667085;
+            font-size: 10px;
+        }
+
+        .dashboard-link {
+            color: #0b3d91;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* PAGE */
+
+        .submit-page {
+            padding: 45px 0 70px;
+        }
+
+        .page-heading {
+            margin-bottom: 28px;
+        }
+
+        .page-heading h1 {
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+        .page-heading p {
+            color: #667085;
+            font-size: 13px;
+        }
+
+        /* PROGRESS */
+
+        .progress {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .progress-step {
+            background: #eaecf0;
+            height: 6px;
+            border-radius: 20px;
+        }
+
+        .progress-step.completed {
+            background: #12b76a;
+        }
+
+        .progress-step.active {
+            background: #0b3d91;
+        }
+
+        /* CARD */
+
+        .submit-card {
+            background: white;
+            border: 1px solid #eaecf0;
+            border-radius: 12px;
+            padding: 35px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-heading {
+            border-bottom: 1px solid #eaecf0;
+            padding-bottom: 14px;
+            margin-bottom: 20px;
+        }
+
+        .section-heading h2 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .section-heading p {
+            color: #667085;
+            font-size: 11px;
+        }
+
+        /* SUMMARY */
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .summary-item {
+            background: #f8fafc;
+            border: 1px solid #eaecf0;
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .summary-label {
+            color: #667085;
+            font-size: 10px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .summary-value {
+            color: #101828;
+            font-size: 13px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        /* NOTICE */
+
+        .notice {
+            background: #edf4ff;
+            border: 1px solid #b2d4ff;
+            border-radius: 9px;
+            padding: 16px;
+            color: #174ea6;
+            font-size: 11px;
+        }
+
+        .notice strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* DECLARATION */
+
+        .confirmation-box {
+            background: #f8fafc;
+            border: 1px solid #eaecf0;
+            border-radius: 9px;
+            padding: 18px;
+
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .confirmation-box input {
+            width: auto;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .confirmation-box label {
+            color: #475467;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        /* ACTIONS */
+
+        .actions {
+            border-top: 1px solid #eaecf0;
+
+            margin-top: 30px;
+            padding-top: 22px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 7px;
+
+            padding: 11px 18px;
+
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .btn-secondary {
+            background: #f2f4f7;
+            color: #344054;
+        }
+
+        .btn-primary {
+            background: #0b3d91;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #082b68;
+        }
+
+        .btn-primary:disabled {
+            background: #98a2b3;
+            cursor: not-allowed;
+        }
+
+        /* SUCCESS */
+
+        .success-message {
+            display: none;
+
+            text-align: center;
+
+            background: #ecfdf3;
+            border: 1px solid #abefc6;
+
+            border-radius: 10px;
+
+            padding: 30px;
+        }
+
+        .success-icon {
+            width: 55px;
+            height: 55px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            background: #12b76a;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .success-message h2 {
+            color: #067647;
+            margin-bottom: 8px;
+        }
+
+        .success-message p {
+            color: #475467;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .reference {
+            display: inline-block;
+
+            background: white;
+            border: 1px solid #abefc6;
+
+            border-radius: 7px;
+
+            padding: 10px 16px;
+
+            color: #067647;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .success-actions {
+            margin-top: 20px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 600px) {
+
+            .submit-page {
+                padding-top: 25px;
+            }
+
+            .submit-card {
+                padding: 22px;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .progress {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .action-buttons {
+                width: 100%;
+            }
+
+            .action-buttons .btn {
+                flex: 1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="application-header">
+
+    <div class="container header-inner">
+
+        <a
+            href="index.html"
+            class="brand">
+
+            <div class="brand-logo">
+                SE
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    School of Economics
+                </strong>
+
+                <span>
+                    Online Application Portal
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="dashboard.html"
+            class="dashboard-link">
+
+            ← Dashboard
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- PAGE -->
+
+<main class="submit-page">
+
+    <div class="container">
+
+
+        <div class="page-heading">
+
+            <h1>
+                Submit Application
+            </h1>
+
+            <p>
+                You are almost done. Please confirm your
+                information before submitting your application.
+            </p>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress">
+
+            <div class="progress-step completed"></div>
+
+            <div class="progress-step completed"></div>
+
+            <div class="progress-step completed"></div>
+
+            <div class="progress-step active"></div>
+
+        </div>
+
+
+
+        <!-- SUBMISSION CARD -->
+
+        <div
+            id="submissionCard"
+            class="submit-card">
+
+
+            <!-- APPLICATION SUMMARY -->
+
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Final Application Summary
+                    </h2>
+
+                    <p>
+                        Please check that the information below
+                        is correct before submitting.
+                    </p>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+                            Applicant Name
+                        </div>
+
+                        <div
+                            id="applicantName"
+                            class="summary-value">
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+                            Programme
+                        </div>
+
+                        <div
+                            id="programme"
+                            class="summary-value">
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+                            Entry Type
+                        </div>
+
+                        <div
+                            id="entryType"
+                            class="summary-value">
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+                            Academic Year
+                        </div>
+
+                        <div
+                            id="academicYear"
+                            class="summary-value">
+                            2026/2027
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+                            Email Address
+                        </div>
+
+                        <div
+                            id="email"
+                            class="summary-value">
+                            —
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+                            Phone Number
+                        </div>
+
+                        <div
+                            id="phone"
+                            class="summary-value">
+                            —
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- IMPORTANT NOTICE -->
+
+            <section class="section">
+
+                <div class="notice">
+
+                    <strong>
+                        Important before submission
+                    </strong>
+
+                    Once you click
+                    <b>Submit Application</b>,
+                    your application will be marked as submitted.
+                    Please make sure all information is correct.
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CONFIRMATION -->
+
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Applicant Confirmation
+                    </h2>
+
+                    <p>
+                        Confirm that you have reviewed your application.
+                    </p>
+
+                </div>
+
+
+                <div class="confirmation-box">
+
+                    <input
+                        type="checkbox"
+                        id="confirmSubmission">
+
+                    <label for="confirmSubmission">
+
+                        I confirm that I have reviewed my
+                        application and that the information
+                        provided is complete and accurate.
+                        I understand that submitting this
+                        application is a formal request for
+                        admission to the School of Economics.
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="actions">
+
+                <a
+                    href="review.html"
+                    class="btn btn-secondary">
+
+                    ← Back to Review
+
+                </a>
+
+
+                <div class="action-buttons">
+
+                    <a
+                        href="dashboard.html"
+                        class="btn btn-secondary">
+
+                        Save & Exit
+
+                    </a>
+
+
+                    <button
+                        id="submitButton"
+                        type="button"
+                        class="btn btn-primary"
+                        disabled>
+
+                        Submit Application
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SUCCESS MESSAGE -->
+
+        <div
+            id="successMessage"
+            class="success-message">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Application Submitted Successfully
+            </h2>
+
+            <p>
+                Your application has been recorded.
+                Please keep your application reference number
+                for future enquiries.
+            </p>
+
+
+            <div
+                id="referenceNumber"
+                class="reference">
+
+                —
+
+            </div>
+
+
+            <div class="success-actions">
+
+                <a
+                    href="dashboard.html"
+                    class="btn btn-primary">
+
+                    Return to Dashboard
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+
+/* =====================================================
+   LOGIN CHECK
+===================================================== */
+
+const loggedIn =
+    localStorage.getItem("loggedIn");
+
+const applicant =
+    localStorage.getItem("applicant");
+
+
+if (
+    loggedIn !== "true" ||
+    !applicant
+) {
+
+    window.location.href =
+        "login.html";
+
+}
+
+
+
+/* =====================================================
+   LOAD APPLICATION DATA
+===================================================== */
+
+const savedApplication =
+    localStorage.getItem(
+        "applicationData"
+    );
+
+
+let applicationData = {};
+
+
+if (savedApplication) {
+
+    try {
+
+        applicationData =
+            JSON.parse(
+                savedApplication
+            );
+
+    }
+
+    catch (error) {
+
+        applicationData = {};
+
+    }
+
+}
+
+
+
+/* =====================================================
+   DISPLAY SUMMARY
+===================================================== */
+
+const firstName =
+    applicationData.firstName || "";
+
+const middleName =
+    applicationData.middleName || "";
+
+const lastName =
+    applicationData.lastName || "";
+
+
+const fullName =
+    [firstName, middleName, lastName]
+    .filter(Boolean)
+    .join(" ");
+
+
+document.getElementById(
+    "applicantName"
+).textContent =
+    fullName || "Not provided";
+
+
+document.getElementById(
+    "programme"
+).textContent =
+    applicationData.programme ||
+    "Not provided";
+
+
+document.getElementById(
+    "entryType"
+).textContent =
+    applicationData.entryType ||
+    "Not provided";
+
+
+document.getElementById(
+    "academicYear"
+).textContent =
+    applicationData.academicYear ||
+    "2026/2027";
+
+
+document.getElementById(
+    "email"
+).textContent =
+    applicationData.email ||
+    "Not provided";
+
+
+document.getElementById(
+    "phone"
+).textContent =
+    applicationData.phone ||
+    "Not provided";
+
+
+
+/* =====================================================
+   ENABLE SUBMIT BUTTON
+===================================================== */
+
+const confirmation =
+    document.getElementById(
+        "confirmSubmission"
+    );
+
+
+const submitButton =
+    document.getElementById(
+        "submitButton"
+    );
+
+
+confirmation.addEventListener(
+    "change",
+    function() {
+
+        submitButton.disabled =
+            !this.checked;
+
+    }
+);
+
+
+
+/* =====================================================
+   SUBMIT APPLICATION
+===================================================== */
+
+submitButton.addEventListener(
+    "click",
+    function() {
+
+
+        if (!confirmation.checked) {
+
+            return;
+
+        }
+
+
+        /*
+         * Generate application reference.
+         */
+
+        const reference =
+            "SE-" +
+            new Date()
+                .getFullYear() +
+            "-" +
+            Math.random()
+                .toString(36)
+                .substring(2, 8)
+                .toUpperCase();
+
+
+
+        /*
+         * Save submission information.
+         */
+
+        applicationData.applicationReference =
+            reference;
+
+        applicationData.submissionDate =
+            new Date().toISOString();
+
+        applicationData.status =
+            "Submitted";
+
+
+
+        localStorage.setItem(
+
+            "applicationData",
+
+            JSON.stringify(
+                applicationData
+            )
+
+        );
+
+
+        localStorage.setItem(
+            "applicationStep",
+            "submitted"
+        );
+
+
+        localStorage.setItem(
+            "applicationSubmitted",
+            "true"
+        );
+
+
+
+        /*
+         * Hide form.
+         */
+
+        document.getElementById(
+            "submissionCard"
+        ).style.display =
+            "none";
+
+
+
+        /*
+         * Show success message.
+         */
+
+        document.getElementById(
+            "successMessage"
+        ).style.display =
+            "block";
+
+
+        document.getElementById(
+            "referenceNumber"
+        ).textContent =
+            reference;
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
